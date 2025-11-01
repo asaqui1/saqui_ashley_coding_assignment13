@@ -1,4 +1,4 @@
-// Testing pre-commit hooks for Assignment 13
+// Testing pre-commit hooks for Coding Assignment 13
 
 // imports
 import React from 'react';
