@@ -1,0 +1,50 @@
+# Dockerfile.react
+
+# Stage 1: Build React App
+FROM node:20-alpine AS build
+
+WORKDIR /app
+
+# Copy package files and install dependencies 
+COPY package*json ./
+RUN npm install
+
+# Copy all source files
+COPY . ./
+
+# Build the React bundle
+FROM nginx:alpine
+
+# Copy build output to Nginx html folder
+COPY --from=build /app/build /usr/share/nginx/html
+
+# Expose port 8083 (as per rubric)
+EXPOSE 127:0.0.1:8083
+
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
+
+# Run React container
+
+docker build -f Dockerfile.react -t ashley_ui_garden 
+ 
+docker run -d -p 8083:80 --name ashley_ui_garden_container ashley_ui_garden
+
+-
+
+# Dockerfile.storybook
+
+# Use Node.js to build storybook
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Copy all source files 
+COPY . ./
+
+# Expose storybook port
+EXPOSE 8083
+
+# Start storybook
+CMD ["npm", "run", "storybook", "--", "p", "8083", "-h" "0.0.0.0"]
+
