@@ -13,7 +13,7 @@ RUN npm install
 # Step 5: Copy all project files
 COPY . .
 
-# Step 6: Run code quality checks, but don’t fail Docker build
+# Step 6: Run code quality checks, but don't fail Docker build
 RUN npm run prettier:check || true
 RUN npm run lint || true
 RUN npm test -- --passWithNoTests || true
@@ -24,11 +24,14 @@ RUN npm run build
 # Step 8: Use Nginx to serve the built app
 FROM nginx:alpine
 
-# Step 9: Copy the build output from the previous step
+# Step 9: Copy Nginx config to use port 8018
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Step 10: Copy the build output from the previous step
 COPY --from=build /app/saqui_ashley_ui_garden_build_checks/build /usr/share/nginx/html
 
-# Step 10: Expose port 80 inside the container
-EXPOSE 80
+# Step 11: Expose port 8018 inside the container
+EXPOSE 8018
 
-# Step 11: Start Nginx
+# Step 12: Start Nginx
 CMD ["nginx", "-g", "daemon off;"]
