@@ -15,7 +15,8 @@ const StyledButton = styled.button<StyledButtonProps>`
   color: white;
   border: none;
   border-radius: 5px;
-  cursor: ${(props: StyledButtonProps) => (props.$disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${(props: StyledButtonProps) =>
+    props.$disabled ? 'not-allowed' : 'pointer'};
   transition: 0.3s;
 
   &:hover {
@@ -31,7 +32,11 @@ export const Button: React.FC<ButtonProps> = ({
   onClick,
 }: ButtonProps) => {
   return (
-    <StyledButton $disabled={disabled} $backgroundColor={backgroundColor} onClick={onClick}>
+    <StyledButton
+      $disabled={disabled}
+      $backgroundColor={backgroundColor}
+      onClick={onClick}
+    >
       {text}
     </StyledButton>
   );

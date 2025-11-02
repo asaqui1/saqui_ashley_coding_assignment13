@@ -2,9 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   code-quality:
@@ -15,28 +15,28 @@ jobs:
         node-version: [18.x]
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
-    - name: Install dependencies
-      run: npm install
+      - name: Install dependencies
+        run: npm install
 
-    - name: Run Prettier check
-      run: npm run prettier:check
+      - name: Run Prettier check
+        run: npm run prettier:check
 
-    - name: Run ESLint
-      run: npm run lint
+      - name: Run ESLint
+        run: npm run lint
 
-    - name: Run Tests
-      run: npm test
+      - name: Run Tests
+        run: npm test
 
-    - name: Build production version
-      run: npm run build
+      - name: Build production version
+        run: npm run build
 
   notify:
     runs-on: ubuntu-latest
@@ -44,12 +44,12 @@ jobs:
     if: always()
 
     steps:
-    - name: Check job status
-      run: |
-        if [ "${{ needs.code-quality.result }}" == "success" ]; then
-          echo "✅ All checks passed!"
-          exit 0
-        else
-          echo "❌ Build failed! Check the logs above."
-          exit 1
-        fi
+      - name: Check job status
+        run: |
+          if [ "${{ needs.code-quality.result }}" == "success" ]; then
+            echo "✅ All checks passed!"
+            exit 0
+          else
+            echo "❌ Build failed! Check the logs above."
+            exit 1
+          fi

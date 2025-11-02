@@ -12,7 +12,11 @@ type Story = StoryObj<TableProps>;
 
 export const Default: Story = {
   args: {
-    headers: [{ text: 'Best friend' }, { text: 'Where we met' }, { text: 'Friendship length' }],
+    headers: [
+      { text: 'Best friend' },
+      { text: 'Where we met' },
+      { text: 'Friendship length' },
+    ],
     rows: [
       [{ text: 'Elora' }, { text: 'High school' }, { text: '10 years' }],
       [{ text: 'Andrea' }, { text: 'Facebook' }, { text: '14-15 years' }],

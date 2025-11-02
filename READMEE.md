@@ -1,4 +1,5 @@
 # UI Component Library Assignment - Ashley Saqui
+
 This project is a **React component library** made with **Create React App** and **Storybook** for my assignment. It includes components like Buttons, Cards, Tables, Labels, Dropdowns, Radio Buttons, Hero Image, Img, and Text.
 
 All components have default and disabled states. You can see and interact with them in Storybook.
@@ -6,6 +7,7 @@ All components have default and disabled states. You can see and interact with t
 ## How to run React
 
 ## Step 1 - Install dependencies
+
 Open terminal in the project folder and run:
 
 ```bash
@@ -46,3 +48,4 @@ docker run -p 8083:80 --name saqui_ashley_coding assignment12 saqui_ashley_ui_ga
 
 ## Step 8 - To learn more, visit: React Documentation. Create React App Documentation. Storybook Documentation
 
+```

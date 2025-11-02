@@ -11,7 +11,12 @@ const StyledTable = styled.table<{ borderColor?: string }>`
   border: 1px solid ${(props) => props.borderColor || 'black'};
 `;
 
-export const Table: React.FC<TableProps> = ({ headers, rows, footer, borderColor }) => (
+export const Table: React.FC<TableProps> = ({
+  headers,
+  rows,
+  footer,
+  borderColor,
+}) => (
   <StyledTable borderColor={borderColor}>
     <thead>
       <TableHeader headers={headers} />

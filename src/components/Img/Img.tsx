@@ -10,6 +10,20 @@ const StyledImg = styled.img<{ borderRadius?: string; disabled?: boolean }>`
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'auto')};
 `;
 
-export const Img: React.FC<ImgProps> = ({ src, alt, width, height, borderRadius, disabled = false }) => (
-  <StyledImg src={src} alt={alt} width={width} height={height} borderRadius={borderRadius} disabled={disabled} />
+export const Img: React.FC<ImgProps> = ({
+  src,
+  alt,
+  width,
+  height,
+  borderRadius,
+  disabled = false,
+}) => (
+  <StyledImg
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    borderRadius={borderRadius}
+    disabled={disabled}
+  />
 );

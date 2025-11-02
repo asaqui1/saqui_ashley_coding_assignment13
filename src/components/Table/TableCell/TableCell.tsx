@@ -7,6 +7,8 @@ const StyledTd = styled.td`
   padding: 8px;
 `;
 
-const TableCell: React.FC<TableCellProps> = ({ text }) => <StyledTd>{text}</StyledTd>;
+const TableCell: React.FC<TableCellProps> = ({ text }) => (
+  <StyledTd>{text}</StyledTd>
+);
 
 export default TableCell;

@@ -13,5 +13,7 @@ test('Button is visible', () => {
 // disabled test
 test('Button background color changes when disabled', () => {
   render(<Button text="Disabled Button" disabled />);
-  expect(screen.getByText('Disabled Button')).toHaveStyle('background-color: grey');
+  expect(screen.getByText('Disabled Button')).toHaveStyle(
+    'background-color: grey'
+  );
 });

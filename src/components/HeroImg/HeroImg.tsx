@@ -19,4 +19,13 @@ export const HeroImg: React.FC<HeroImgProps> = ({
   height,
   borderRadius,
   disabled = false,
-}) => <StyledImg src={src} alt={alt} width={width} height={height} borderRadius={borderRadius} disabled={disabled} />;
+}) => (
+  <StyledImg
+    src={src}
+    alt={alt}
+    width={width}
+    height={height}
+    borderRadius={borderRadius}
+    disabled={disabled}
+  />
+);

@@ -18,7 +18,8 @@ type Story = StoryObj<CardProps>;
 export const Default: Story = {
   args: {
     title: 'Skincare thoughts',
-    description: 'Honestly, keep it simple, because less is more. My holy grails are sunscreen, moisturizer, BHA toner, and snail serum <3',
+    description:
+      'Honestly, keep it simple, because less is more. My holy grails are sunscreen, moisturizer, BHA toner, and snail serum <3',
     backgroundColor: '#ffffff',
   },
 };
@@ -26,7 +27,8 @@ export const Default: Story = {
 export const CustomBackground: Story = {
   args: {
     title: 'Skincare thoughts',
-    description: 'Honestly, keep it simple, because less is more. My holy grails are sunscreen, moisturizer, BHA toner, and snail serum <3',
+    description:
+      'Honestly, keep it simple, because less is more. My holy grails are sunscreen, moisturizer, BHA toner, and snail serum <3',
     backgroundColor: 'lightpink',
   },
 };

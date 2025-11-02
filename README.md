@@ -14,6 +14,7 @@ This project builds on Assignment 12 by adding automated code quality checks to 
 ## What this is:
 
 This is a React component library with automatic code quality checks. Before you can save code, the computer checks that your code is:
+
 - Properly formatted (Prettier)
 - Follows good coding rules (ESLint)
 - Passes all tests (Jest)
@@ -78,11 +79,13 @@ npm run build
 ### Run Prettier (Code Formatting)
 
 Check formatting:
+
 ```bash
 npm run prettier:check
 ```
 
 Auto-fix formatting:
+
 ```bash
 npx prettier --write src/
 ```
@@ -90,11 +93,13 @@ npx prettier --write src/
 ### Run ESLint (Code Rules)
 
 Check code:
+
 ```bash
 npm run lint
 ```
 
 Auto-fix errors:
+
 ```bash
 npx eslint src/ --fix
 ```
@@ -117,6 +122,7 @@ git commit -m "Your message here"
 ```
 
 Husky will:
+
 1. Check formatting with Prettier
 2. Check code rules with ESLint
 3. Run tests with Jest
@@ -136,6 +142,7 @@ GitHub Actions provides a second layer of enforcement. It automatically runs the
 ### Workflow File
 
 The workflow is defined in `.github/workflows/ci.yml` and runs:
+
 1. Prettier check
 2. ESLint check
 3. Jest tests
@@ -144,6 +151,7 @@ The workflow is defined in `.github/workflows/ci.yml` and runs:
 ### What Happens
 
 When you push to GitHub:
+
 ```bash
 git push origin main
 ```
@@ -176,6 +184,7 @@ docker run -p 8018:8018 saqui_ashley_coding_assignment13
 ### Access the App
 
 Open your browser and go to:
+
 ```
 http://localhost:8018
 or
@@ -185,11 +194,9 @@ http://127.0.0.1:8018
 ## Dockerfile Details
 
 The Dockerfile:
+
 1. Uses Node 18 to build the React app
 2. Runs Prettier, ESLint, and Jest checks (non-blocking)
 3. Creates a production build
 4. Serves the app with Nginx on port 8018
 5. Uses the working directory: `/app/saqui_ashley_ui_garden_build_checks`
-
-
-

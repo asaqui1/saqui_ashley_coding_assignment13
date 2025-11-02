@@ -2,14 +2,24 @@ import React from 'react';
 import styled from 'styled-components';
 import { DropdownProps } from './Dropdown.types';
 
-const StyledSelect = styled.select<{ backgroundColor?: string; disabled?: boolean }>`
+const StyledSelect = styled.select<{
+  backgroundColor?: string;
+  disabled?: boolean;
+}>`
   padding: 8px 12px;
   border-radius: 4px;
-  background-color: ${(props) => (props.disabled ? 'grey' : props.backgroundColor || 'white')};
+  background-color: ${(props) =>
+    props.disabled ? 'grey' : props.backgroundColor || 'white'};
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
 `;
 
-export const Dropdown: React.FC<DropdownProps> = ({ options, selected, disabled = false, backgroundColor, onChange }) => {
+export const Dropdown: React.FC<DropdownProps> = ({
+  options,
+  selected,
+  disabled = false,
+  backgroundColor,
+  onChange,
+}) => {
   return (
     <StyledSelect
       value={selected}
