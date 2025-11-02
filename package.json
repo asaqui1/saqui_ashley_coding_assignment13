@@ -40,11 +40,11 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --passWithNoTests",
+    "test": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "storybook": "storybook dev -p 8083 --host 127.0.0.1",
     "build-storybook": "storybook build",
-    "prepare": "husky",
+    "prepare": "husky install",
     "prettier:check": "prettier --check .",
     "lint": "eslint ."
   },
@@ -59,7 +59,7 @@
     "*.{js,jsx,ts,tsx}": [
       "prettier --write",
       "eslint --fix",
-      "npm test -- --bail --findRelatedTests"
+      "react-scripts test --watchAll=false --bail --findRelatedTests"
     ]
   },
   "browserslist": {

@@ -1,0 +1,432 @@
+
+> saqui_ashley_ui_garden@0.1.0 test
+> react-scripts test --watchAll=false --verbose
+
+  console.error
+    In HTML, <tr> cannot be a child of <div>.
+    This will cause a hydration error.
+
+    [0m [90m 3 |[39m
+     [90m 4 |[39m test([32m'renders TableHeader'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 5 |[39m   render([33m<[39m[33mTableHeader[39m headers[33m=[39m{[{ text[33m:[39m [32m'Name'[39m }[33m,[39m { text[33m:[39m [32m'Age'[39m }]} [33m/[39m[33m>[39m)[33m;[39m
+     [90m   |[39m         [31m[1m^[22m[39m
+     [90m 6 |[39m   expect(screen[33m.[39mgetByText([32m'Name'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 7 |[39m   expect(screen[33m.[39mgetByText([32m'Age'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 8 |[39m })[33m;[39m[0m
+
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom-client.development.js:2598:19)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:12556:15)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17777:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17658:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:17469:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:17450:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:16504:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:18957:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:884:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:292:10)
+      at Object.<anonymous> (src/components/Table/TableHeader/TableHeader.test.tsx:5:9)
+
+PASS src/components/Table/TableHeader/TableHeader.test.tsx
+  √ renders TableHeader (211 ms)
+
+  console.error
+    React does not recognize the `backgroundColor` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `backgroundcolor` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+
+    [0m [90m  9 |[39m
+     [90m 10 |[39m test([32m'Card background changes when prop is set'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 11 |[39m   render([33m<[39m[33mCard[39m title[33m=[39m[32m"Test"[39m description[33m=[39m[32m"Desc"[39m backgroundColor[33m=[39m[32m"red"[39m [33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 12 |[39m   [36mconst[39m card [33m=[39m screen[33m.[39mgetByText([32m'Test'[39m)[33m.[39mparentElement[33m;[39m
+     [90m 13 |[39m   expect(card)[33m.[39mtoHaveStyle([32m'background-color: red'[39m)[33m;[39m
+     [90m 14 |[39m })[33m;[39m[0m
+
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3001:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3146:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:19868:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:20491:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:12662:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17777:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17658:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:17469:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:17450:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:16504:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:18957:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:884:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:292:10)
+      at Object.<anonymous> (src/components/Card/Card.test.tsx:11:9)
+
+  console.error
+    React does not recognize the `backgroundColor` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `backgroundcolor` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+
+    [0m [90m  7 |[39m [90m// visible test[39m
+     [90m  8 |[39m test([32m'Button is visible'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m  9 |[39m   render([33m<[39m[33mButton[39m text[33m=[39m[32m"Test Button"[39m [33m/[39m[33m>[39m)[33m;[39m
+     [90m    |[39m         [31m[1m^[22m[39m
+     [90m 10 |[39m   expect(screen[33m.[39mgetByText([32m'Test Button'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 11 |[39m })[33m;[39m
+     [90m 12 |[39m[0m
+
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3001:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3146:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:19868:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:20491:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:12662:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17777:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17658:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:17469:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:17450:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:16504:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:18957:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:884:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:292:10)
+      at Object.<anonymous> (src/components/Button/Button.test.tsx:9:9)
+
+PASS src/components/Img/Img.test.tsx
+  √ renders Img component (73 ms)
+  √ Img is semi-transparent when disabled (82 ms)
+
+PASS src/components/Table/Table.test.tsx
+  √ renders Table component (110 ms)
+
+PASS src/components/RadioButton/RadioButton.test.tsx
+  √ renders RadioButton component (84 ms)
+  √ RadioButton is greyed out when disabled (30 ms)
+  √ calls onChange when clicked (41 ms)
+
+PASS src/components/Text/Text.test.tsx
+  √ renders Text component (69 ms)
+  √ Text is greyed out when disabled (81 ms)
+
+PASS src/components/HeroImg/HeroImg.test.tsx
+  √ renders HeroImg component (80 ms)
+  √ HeroImg is semi-transparent when disabled (110 ms)
+
+PASS src/components/Label/Label.test.tsx
+  √ renders Label component (85 ms)
+  √ Label is greyed out when disabled (88 ms)
+
+PASS src/components/Card/Card.test.tsx
+  √ renders Card component (82 ms)
+  √ Card background changes when prop is set (232 ms)
+
+PASS src/components/Dropdown/Dropdown.test.tsx
+  √ renders Dropdown component (194 ms)
+  √ Dropdown is greyed out when disabled (50 ms)
+  √ calls onChange when selecting option (29 ms)
+
+  console.error
+    React does not recognize the `backgroundColor` prop on a DOM element. If you intentionally want it to appear in the DOM as a custom attribute, spell it as lowercase `backgroundcolor` instead. If you accidentally passed it from a parent component, remove it from the DOM element.
+
+    [0m [90m 4 |[39m
+     [90m 5 |[39m test([32m'renders learn react link'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 6 |[39m   render([33m<[39m[33mApp[39m [33m/[39m[33m>[39m)[33m;[39m
+     [90m   |[39m         [31m[1m^[22m[39m
+     [90m 7 |[39m   [36mconst[39m linkElement [33m=[39m screen[33m.[39mgetByText([35m/learn react/i[39m)[33m;[39m
+     [90m 8 |[39m   expect(linkElement)[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 9 |[39m })[33m;[39m[0m
+
+      at validateProperty (node_modules/react-dom/cjs/react-dom-client.development.js:3001:19)
+      at warnUnknownProperties (node_modules/react-dom/cjs/react-dom-client.development.js:3146:9)
+      at validatePropertiesInDevelopment (node_modules/react-dom/cjs/react-dom-client.development.js:19868:9)
+      at setInitialProperties (node_modules/react-dom/cjs/react-dom-client.development.js:20491:7)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:12662:18)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17777:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17658:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:17469:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:17450:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:16504:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:18957:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:884:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:292:10)
+      at Object.<anonymous> (src/App.test.tsx:6:9)
+
+PASS src/components/Button/Button.test.tsx
+  √ Button is visible (242 ms)
+  √ Button background color changes when disabled (72 ms)
+
+FAIL src/App.test.tsx
+  × renders learn react link (265 ms)
+
+  ● renders learn react link
+
+    TestingLibraryElementError: Unable to find an element with the text: /learn react/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"App"[39m
+        [36m>[39m
+          [36m<h1>[39m
+            [0mComponent Library Showcase[0m
+          [36m</h1>[39m
+          [36m<button[39m
+            [33mbackgroundcolor[39m=[32m"blue"[39m
+            [33mclass[39m=[32m"sc-bRKDuR jSIUxI"[39m
+          [36m>[39m
+            [0mDefault Button[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mbackgroundcolor[39m=[32m"blue"[39m
+            [33mclass[39m=[32m"sc-bRKDuR dfaxrr"[39m
+            [33mdisabled[39m=[32m""[39m
+          [36m>[39m
+            [0mDisabled Button[0m
+          [36m</button>[39m
+          [36m<button[39m
+            [33mbackgroundcolor[39m=[32m"purple"[39m
+            [33mclass[39m=[32m"sc-bRKDuR hLGhxs"[39m
+          [36m>[39m
+            [0mCustom Color[0m
+          [36m</button>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"sc-hvigdm kJDbPZ"[39m
+          [36m>[39m
+            [0mThis is a label[0m
+          [36m</span>[39m
+          [36m<span[39m
+            [33mclass[39m=[32m"sc-fhHczv hePfbd"[39m
+          [36m>[39m
+            [0mThis is some text content[0m
+          [36m</span>[39m
+          [36m<select[39m
+            [33mclass[39m=[32m"sc-ggWZvA bbBUNw"[39m
+          [36m>[39m
+            [36m<option[39m
+              [33mvalue[39m=[32m"Option 1"[39m
+            [36m>[39m
+              [0mOption 1[0m
+            [36m</option>[39m
+            [36m<option[39m
+              [33mvalue[39m=[32m"Option 2"[39m
+            [36m>[39m
+              [0mOption 2[0m
+            [36m</option>[39m
+            [36m<option[39m
+              [33mvalue[39m=[32m"Option 3"[39m
+            [36m>[39m
+              [0mOption 3[0m
+            [36m</option>[39m
+          [36m</select>[39m
+          [36m<label[39m
+            [33mclass[39m=[32m"sc-dTvVRJ dxWhhv"[39m
+          [36m>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"sc-jwTyAe fsZMAf"[39m
+              [33mtype[39m=[32m"radio"[39m
+            [36m/>[39m
+            [0mOption A[0m
+          [36m</label>[39m
+          [36m<label[39m
+            [33mclass[39m=[32m"sc-dTvVRJ dxWhhv"[39m
+          [36m>[39m
+            [36m<input[39m
+              [33mclass[39m=[32m"sc-jwTyAe fsZMAf"[39m
+              [33mtype[39m=[32m"radio"[39m
+            [36m/>[39m
+            [0mOption B[0m
+          [36m</label>[39m
+          [36m<img[39m
+            [33malt[39m=[32m"Example"[39m
+            [33mclass[39m=[32m"sc-hjsuWn grvidy"[39m
+            [33msrc[39m=[32m"https://via.placeholder.com/100"[39m
+          [36m/>[39m
+          [36m<img[39m
+            [33malt[39m=[32m"Hero Image"[39m
+            [33mclass[39m=[32m"sc-jJLAfE cdZasD"[39m
+            [33msrc[39m=[32m"https://via.placeholder.com/600x200"[39m
+          [36m/>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"sc-hwkwBN lonMIQ"[39m
+          [36m>[39m
+            [36m<h3>[39m
+              [0mCard Title[0m
+            [36m</h3>[39m
+            [36m<p>[39m
+              [0mThis is a card description.[0m
+            [36m</p>[39m
+          [36m</div>[39m
+          [36m<table[39m
+            [33mclass[39m=[32m"sc-eqYatC bAxnGq"[39m
+          [36m>[39m
+            [36m<thead>[39m
+              [36m<tr>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"sc-kNOymR lnsXfl"[39m
+                [36m>[39m
+                  [0mHeader 1[0m
+                [36m</th>[39m
+                [36m<th[39m
+                  [33mclass[39m=[32m"sc-kNOymR lnsXfl"[39m
+                [36m>[39m
+                  [0mHeader 2[0m
+                [36m</th>[39m
+              [36m</tr>[39m
+            [36m</thead>[39m
+            [36m<tbody>[39m
+              [36m<tr>[39m
+                [36m<td[39m
+                  [33mclass[39m=[32m"sc-dYwGCk jeroIU"[39m
+                [36m>[39m
+                  [0mRow 1 Cell 1[0m
+                [36m</td>[39m
+                [36m<td[39m
+                  [33mclass[39m=[32m"sc-dYwGCk jeroIU"[39m
+                [36m>[39m
+                  [0mRow 1 Cell 2[0m
+                [36m</td>[39m
+              [36m</tr>[39m
+              [36m<tr>[39m
+                [36m<td[39m
+                  [33mclass[39m=[32m"sc-dYwGCk jeroIU"[39m
+                [36m>[39m
+                  [0mRow 2 Cell 1[0m
+                [36m</td>[39m
+                [36m<td[39m
+                  [33mclass[39m=[32m"sc-dYwGCk jeroIU"[39m
+                [36m>[39m
+                  [0mRow 2 Cell 2[0m
+                [36m</td>[39m
+              [36m</tr>[39m
+            [36m</tbody>[39m
+            [36m<tfoot>[39m
+              [36m<tr>[39m
+                [36m<td[39m
+                  [33mclass[39m=[32m"sc-lgpSej gzqidO"[39m
+                  [33mcolspan[39m=[32m"3"[39m
+                [36m>[39m
+                  [0mFooter content here[0m
+                [36m</td>[39m
+              [36m</tr>[39m
+            [36m</tfoot>[39m
+          [36m</table>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+    [0m [90m  5 |[39m test([32m'renders learn react link'[39m[33m,[39m () [33m=>[39m {
+     [90m  6 |[39m   render([33m<[39m[33mApp[39m [33m/[39m[33m>[39m)[33m;[39m
+    [31m[1m>[22m[39m[90m  7 |[39m   [36mconst[39m linkElement [33m=[39m screen[33m.[39mgetByText([35m/learn react/i[39m)[33m;[39m
+     [90m    |[39m                              [31m[1m^[22m[39m
+     [90m  8 |[39m   expect(linkElement)[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m  9 |[39m })[33m;[39m
+     [90m 10 |[39m[0m
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+      at node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at getByText (node_modules/@testing-library/dom/dist/query-helpers.js:95:19)
+      at Object.<anonymous> (src/App.test.tsx:7:30)
+
+  console.error
+    In HTML, <tr> cannot be a child of <div>.
+    This will cause a hydration error.
+
+    [0m [90m 3 |[39m
+     [90m 4 |[39m test([32m'renders TableRow'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 5 |[39m   render([33m<[39m[33mTableRow[39m cells[33m=[39m{[{ text[33m:[39m [32m'Ashley'[39m }[33m,[39m { text[33m:[39m [32m'25'[39m }]} [33m/[39m[33m>[39m)[33m;[39m
+     [90m   |[39m         [31m[1m^[22m[39m
+     [90m 6 |[39m   expect(screen[33m.[39mgetByText([32m'Ashley'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 7 |[39m   expect(screen[33m.[39mgetByText([32m'25'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 8 |[39m })[33m;[39m[0m
+
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom-client.development.js:2598:19)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:12556:15)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17777:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17658:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:17469:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:17450:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:16504:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:18957:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:884:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:292:10)
+      at Object.<anonymous> (src/components/Table/TableRow/TableRow.test.tsx:5:9)
+
+PASS src/components/Table/TableRow/TableRow.test.tsx
+  √ renders TableRow (17 ms)
+
+  console.error
+    In HTML, <td> cannot be a child of <div>.
+    This will cause a hydration error.
+
+    [0m [90m 3 |[39m
+     [90m 4 |[39m test([32m'renders TableCell'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 5 |[39m   render([33m<[39m[33mTableCell[39m text[33m=[39m[32m"Cell Text"[39m [33m/[39m[33m>[39m)[33m;[39m
+     [90m   |[39m         [31m[1m^[22m[39m
+     [90m 6 |[39m   expect(screen[33m.[39mgetByText([32m'Cell Text'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 7 |[39m })[33m;[39m[0m
+
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom-client.development.js:2598:19)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:12556:15)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17777:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17658:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:17469:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:17450:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:16504:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:18957:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:884:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:292:10)
+      at Object.<anonymous> (src/components/Table/TableCell/TableCell.test.tsx:5:9)
+
+  console.error
+    In HTML, <tr> cannot be a child of <div>.
+    This will cause a hydration error.
+
+    [0m [90m 3 |[39m
+     [90m 4 |[39m test([32m'renders TableFooter'[39m[33m,[39m () [33m=>[39m {
+    [31m[1m>[22m[39m[90m 5 |[39m   render([33m<[39m[33mTableFooter[39m footer[33m=[39m{{ text[33m:[39m [32m'Footer Text'[39m }} [33m/[39m[33m>[39m)[33m;[39m
+     [90m   |[39m         [31m[1m^[22m[39m
+     [90m 6 |[39m   expect(screen[33m.[39mgetByText([32m'Footer Text'[39m))[33m.[39mtoBeInTheDocument()[33m;[39m
+     [90m 7 |[39m })[33m;[39m[0m
+
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom-client.development.js:2598:19)
+      at completeWork (node_modules/react-dom/cjs/react-dom-client.development.js:12556:15)
+      at runWithFiberInDEV (node_modules/react-dom/cjs/react-dom-client.development.js:874:13)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17777:19)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom-client.development.js:17658:11)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom-client.development.js:17469:41)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom-client.development.js:17450:11)
+      at performWorkOnRoot (node_modules/react-dom/cjs/react-dom-client.development.js:16504:11)
+      at performWorkOnRootViaSchedulerTask (node_modules/react-dom/cjs/react-dom-client.development.js:18957:7)
+      at flushActQueue (node_modules/react/cjs/react.development.js:590:34)
+      at Object.<anonymous>.process.env.NODE_ENV.exports.act (node_modules/react/cjs/react.development.js:884:10)
+      at node_modules/@testing-library/react/dist/act-compat.js:47:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:190:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:292:10)
+      at Object.<anonymous> (src/components/Table/TableFooter/TableFooter.test.tsx:5:9)
+
+PASS src/components/Table/TableFooter/TableFooter.test.tsx
+  √ renders TableFooter (85 ms)
+
+PASS src/components/Table/TableCell/TableCell.test.tsx
+  √ renders TableCell (89 ms)
+
+Test Suites: 1 failed, 13 passed, 14 total
+Tests:       1 failed, 23 passed, 24 total
+Snapshots:   0 total
+Time:        6.894 s
+Ran all test suites.
