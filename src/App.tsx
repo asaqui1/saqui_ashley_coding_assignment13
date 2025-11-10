@@ -9,7 +9,7 @@ import { Dropdown } from './components/Dropdown';
 import { RadioButton } from './components/RadioButton';
 import { Img } from './components/Img';
 import { HeroImg } from './components/HeroImg';
-import  { Card } from './components/Card';
+    import  { Card } from './components/Card';
 import Table from './components/Table/Table';
 
 function App() {
