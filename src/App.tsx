@@ -7,7 +7,7 @@ import { Label } from './components/Label';
 import { Text } from './components/Text';
 import { Dropdown } from './components/Dropdown';
 import { RadioButton } from './components/RadioButton';
-import Img } from './components/Img';
+import { Img } from './components/Img';
 import { HeroImg } from './components/HeroImg';
 import { Card } from './components/Card';
 import Table from './components/Table/Table';
@@ -15,7 +15,7 @@ import Table from './components/Table/Table';
 function App() {
   return (
     <div className="App">
-      <h1>Component Library Showcase</h1>
+      <h1>Component Library Showcase</h1>{}
 
       <Button text="Default Button" />
       <Button text="Disabled Button" disabled />
