@@ -200,4 +200,3 @@ The Dockerfile:
 3. Creates a production build
 4. Serves the app with Nginx on port 8018
 5. Uses the working directory: `/app/saqui_ashley_ui_garden_build_checks`
-
