@@ -15,7 +15,7 @@ import Table from './components/Table/Table';
 function App() {
   return (
     <div className="App">
-      <h1>Component Library Showcase</h1>{}
+      <h1>Component Library Showcase</h1>{ }
 
       <Button text="Default Button" />
       <Button text="Disabled Button" disabled />
